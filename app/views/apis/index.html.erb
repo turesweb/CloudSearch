@@ -1,0 +1,23 @@
+<h1>Listing apis</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @apis.each do |api| %>
+  <tr>
+    <td><%= api.name %></td>
+    <td><%= link_to 'Show', api %></td>
+    <td><%= link_to 'Edit', edit_api_path(api) %></td>
+    <td><%= link_to 'Destroy', api, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Api', new_api_path %>
